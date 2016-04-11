@@ -1,0 +1,233 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+	body {
+		height: 680px;
+	    background-image: url("cg_bg.png");
+	    background-repeat: no-repeat;
+	    background-size: 100%;
+	    margin-left: auto;
+		margin-right: auto;
+		margin-top: auto;
+	}
+	.header{
+		background-color: #e2d2bb;
+		height:50px;
+		opacity: 0.7;
+		font-family: 'Noto Sans Korean';
+	}
+	.header:after{
+		content: "";
+		display:block;
+		clear: both
+	}
+	.h_l{
+		float: left;
+		width: 150px;
+		height: 100%;
+	}
+	.h_l img{
+	padding: 6px;
+	margin-left: 55px;
+	}
+	.h_m{
+		float: left;
+		width: auto
+	}
+	.h_m ul{
+		margin: 0;
+		padding: 0;
+		list-style: none
+	}
+	.h_m li a{
+		display: block;
+		padding: 15px 25px;
+		color: #000000;
+		font-size: 9px;
+		letter-spacing: 2px;
+		text-decoration: none
+	}
+	.h_m li a:hover, a:focus{
+		text-decoration: none
+	}
+	.h_m ul:after{
+		content: "";
+		display: block;
+		clear: both
+	}
+	.h_m li{
+		float: left;
+		width: auto
+	}
+	.h_r{
+		float: right;
+		width: auto;
+		font-family: Noto Sans Korean Medium;		
+	}
+	.h_r ul{
+		margin: 0;
+		margin-right: 30px;
+		padding: 0;
+		list-style: none
+	}
+	.h_r li a{
+		display: block;
+		padding: 15px;
+		color: #000000;
+		font-size: 9px;
+		letter-spacing: 2px;
+		text-decoration: none
+	}
+	.h_r li a:hover, a:focus{
+		text-decoration: none
+	}
+	.h_r ul:after{
+		content: "";
+		display: block;
+		clear: both
+	}
+	.h_r li{
+		float: left;
+		width: auto
+	}
+	.contents{
+		margin-top: 150px;
+		margin-left: 170px;
+	}
+	.con_title img{
+		width: 280px;
+	}
+	.con_ex{
+		margin:20px auto;
+		font-family: 'Noto Sans CJK KR DemiLight';
+		font-size: 9px;
+		letter-spacing: 2.2px;
+		line-height: 2;
+	}
+	.ex_btn img{
+		width: 125px;
+	}
+	.deco_box img{
+		position: absolute;
+		z-index: -1;
+		top: 120px;
+		left: 280px;
+		width: 305px;
+	}
+	.img_search{
+		width: 10x;
+	}
+	.em{
+		font-family: 'Noto Sans Korean Medium';
+	}
+	
+	
+	/* modal */
+	.modal-open{
+		overflow: auto !important;
+		padding-right: 0px !important;
+	}
+	.modal-content{
+		border-radius: 0px !important;
+	}
+	.modal_wrap{
+		width: 300px;
+		height: 405px;
+		padding: 30px 50px;
+	}
+	.login_logo{
+		width:23px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.login_logo img{
+		width:23px;
+	}
+	.login_line{
+		width: 40px;
+		margin: 0 auto;
+	}
+	.login_line img{
+		width: 40px;
+	}
+	.login_title{
+		width: 100px;
+		text-align: center;
+		margin: 0 auto;
+		font-family: Noto Sans Korean Medium;
+		font-size: 18px;
+		font-weight:bold;
+		color: #333333;
+	}
+	.modal_login{
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	.modal_login input{
+		width: 180px;
+		border: none;
+	}
+
+	.modal_input{
+		margin: 10px;
+	 	border-bottom: #222222 1px solid;
+	 	line-height: initial;
+	}
+	.modal_group_btn{
+		width: 200px;
+		padding: 5px auto;
+		text-align: center;
+		font-family: 'Noto Sans CJK KR DemiLight';
+		font-size: 11px;
+		color: #333333;
+	}
+	.login_btn_def{
+		height: 30px;
+		line-height: 10px;
+		background-color: #FBECCB;
+		padding: 10px;
+	}
+	.login_btn_kaka{
+		margin-top: 10px;
+		line-height: 10px;
+		height: 30px;
+		background-color: #FAE101;
+		padding: 10px;
+	}
+	.login_btn_face{
+		margin-top: 10px;
+		line-height: 10px;
+		height: 30px;
+		background-color: #4242E2;
+		color: white;
+		padding: 10px;
+	}
+	.modal_sc_pw{
+		text-align: right;
+		font-size: 8px;
+		color: #636363;
+		padding-right: 10px;
+		font-family: 'Noto Sans CJK KR DemiLight';
+	}
+	.text-placeholder{
+		color: #d3d3d3;
+		text-align : center;
+		font-size: 9px;
+		}
+	::-webkit-input-placeholder{
+		color: #d3d3d3;
+		text-align : center;
+		font-size: 9px;
+	}
+	textarea:-moz-placeholder, input:-moz-placeholder{
+		color: #d3d3d3;
+		text-align : center;
+		font-size: 9px;
+	}
+	.modal_close img{
+		margin-top: 60px !important;
+		margin-left: 270px;
+		width: 33px;
+	}
+	
+	
+	
