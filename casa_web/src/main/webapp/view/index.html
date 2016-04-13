@@ -35,9 +35,9 @@
 			</div>
 			<div class="h_r">
 				<ul>
-					<li><a href="#"><img class="img_search" src="../img/search_icon.png"/></a></li>
-					<li><a href="#"><span data-toggle="modal" data-target=".bs-example-modal-sm">LOGIN</span></a></li>
-					<li><a href="#">SIGN UP</a></li>
+					<li><a href="#"><span data-toggle="modal" data-target=".signup2_m"><img class="img_search" src="../img/search_icon.png"/></span></a></li>
+					<li><a href="#"><span data-toggle="modal" data-target=".login_m">LOGIN</span></a></li>
+					<li><a href="#"><span data-toggle="modal" data-target=".signup_m">SIGN UP</span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -62,7 +62,7 @@
 		</div>
 		
 		<!-- Login modal -->
-		<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal login_m" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 		  <div class="modal-dialog modal-sm">
 		  		      <div class="modal_close"><img src="../img/x_button.png" data-dismiss="modal"></div>
 		    <div class="modal-content">
@@ -86,5 +86,57 @@
 		    </div>
 		  </div>
 		</div>
+		
+		<!-- SignUP modal -->
+		<div class="modal signup_m" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		  <div class="modal-dialog modal-sm">
+		  		      <div class="modal_close"><img src="../img/x_button.png" data-dismiss="modal"></div>
+		    <div class="modal-content">
+		      <div class="modal_wrap">
+		      	<div class="modal_title">
+		      		<div class="login_logo"><img src="../img/cg_logo.png"></div>
+		      		<div class="login_line"><img src="../img/line.png"></div>
+		      		<div class="login_title">JOIN US</div>
+		      	</div>
+		      	<div class="modal_ex">
+		      		10초만의 가입으로 까사갤러리아의</br>
+		      		멋진 작품을 감상하실 수 있습니다.
+		      		<div class="deco_line"></div>
+		      	</div>
+		      	<div class="modal_group_btn">
+		      		<div class="login_btn_def" data-dismiss="modal" data-toggle="modal" data-target=".signup2_m">이메일로 가입하기</div>
+		      		<div class="login_btn_kaka">카카오톡으로 가입하기</div>
+		      		<div class="login_btn_face">페이스북으로 가입하기</div>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		<!-- SignUP-secondpage modal -->
+		<div class="modal signup2_m" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		  <div class="modal-dialog modal-sm">
+		  		      <div class="modal_close"><img src="../img/x_button.png" data-dismiss="modal"></div>
+		    <div class="modal-content">
+		      <div class="modal_wrap">
+		      	<div class="modal_title">
+		      		<div class="login_logo"><img src="../img/cg_logo.png"></div>
+		      		<div class="login_line"><img src="../img/line.png"></div>
+		      		<div class="login_title">JOIN US</div>
+		      	</div>
+		      	<div class="modal_signup">
+		      		<div class="modal_input"><input type="text" placeholder="이메일"></div>
+		      		<div class="modal_input"><input type="text" placeholder="성명"></div>
+		      		<div class="modal_input"><input type="password" placeholder="비밀번호"></div>
+		      		<div class="modal_input"><input type="password" placeholder="확인"></div>
+		      	</div>
+		      	<div class="modal_group_btn">
+		      		<div class="login_btn_def">이메일로 가입하기</div>
+		      	</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
 	</body>
 </html>
