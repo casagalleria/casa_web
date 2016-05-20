@@ -1,10 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face{
+	font-family: 'sub_title';
+	src: url('../font/Script MT Bold.ttf') format("truetype"),
+		  url('../font/Script MT Bold.eot') format('embedded-opentype'),
+		  url('../font/Script MT Bold.woff') format("woff");
+}
+	
 	body {
-		height: 680px;
-	    background-image: url("../img/cg_bg.png");
-	    background-repeat: no-repeat;
-	    background-size: 100%;
+
 	    margin-left: auto;
 		margin-right: auto;
 		margin-top: auto;
@@ -92,28 +96,190 @@
 		width: auto
 	}
 	.contents{
-		margin-top: 150px;
-		margin-left: 170px;
+	margin-top: 30px;
+	margin-left: 180px;
+	width: 100%;
+	height: 300px;
+	}
+	.deco1{
+		display: inline;
+		font-size: 60px;
+		font-family: 'Noto Sans Korean';
+		letter-spacing: 2.2px;
+		font-stretch: ultra-expanded;
+		border-bottom: 1px solid;
+	}
+	.deco2{
+		position: relative;
+		top: -30px;
+		display: inline;
+		font-size: 60px;
+		font-family: 'sub_title', 'Script MT Bold', 'Dynalight';		
+		border-bottom: 1px solid;
+	}
+
+	.bg_img{
+		width: 100%;
+	}
+	.contents_b{
+		position: absolute;
+		/* width: 1960px; */
+	}
+	.contents_inner{
+		position: absolute;
+		top: 45px;
+		left: 10%;
+		right: 10%;
+		width: 900px;
+		margin: 0 auto;
+	}
+	.contents_inner img{
+		width: 450px;
+		height: 292px;
+	}
+	.box1{
+	margin-top : 50px;
+	}
+	.box2{
+		z-index: 0;
+	}
+	.box3{
+		width: 900px;
+		height: 292px;
+		z-index: 0;
+	}
+	.box4{
+		z-index: 0;
+	}
+	.ex_1{
+		position: absolute;
+		top: -80px;
+		right: 0px;
+		width: 450px;
+		height: 292px;
+		background-color: #e2d2bb;
+		font-family: 'Noto Sans CJK KR DemiLight';
+		font-size: 9px;
+		letter-spacing: 2.2px;
+		line-height: 2;
+		padding-left: 50px;
+		padding-top: 30px;
+	}
+	.ex_2{
+		position: absolute;
+		z-index: 5;
+		width: 450px;
+		height: 292px;
+		font-family: 'Noto Sans CJK KR DemiLight';
+		font-size: 9px;
+		letter-spacing: 2.2px;
+		line-height: 2;
+		padding-left: 50px;
+		padding-top: 30px;
+		color: white;
+	}
+	.ex_3{
+		position: absolute;
+		z-index: 5;
+		background-color: white;
+		right: 0px;
+		width: 450px;
+		height: 292px;
+		font-family: 'Noto Sans CJK KR DemiLight';
+		font-size: 9px;
+		letter-spacing: 2.2px;
+		line-height: 2;
+		padding-left: 50px;
+		padding-top: 30px;
+	}
+	.ex_4{
+		position: absolute;
+		z-index: 5;
+		background-color: white;
+		left: 0px;
+		width: 450px;
+		height: 292px;
+		font-family: 'Noto Sans CJK KR DemiLight';
+		font-size: 9px;
+		letter-spacing: 2.2px;
+		line-height: 2;
+		padding-left: 50px;
+		padding-top: 30px;
+		background-color: #e2d2bb;
+	}
+	.box4 img{
+		position: absolute;
+		z-index: 5;
+		right: 0px;
+	}
+	.plant_img img{
+		width: 170px;
+		height: 137px;
+		position: absolute;
+		z-index: 4;
+		right: -60px;
+		top: 140px;
+	}
+	.plant_img2 img{
+		width: 140px;
+		height: 117px;
+		position: absolute;
+		z-index: 4;
+		left: -65px;
+		top: 870px;
+	}
+	.contents_c{
+		position: absolute;
+		top: 1750px;
+		width: 100%;
+		height: 550px;
+	}
+	.padding{
+		margin-top: 30px;
+		margin-left: 180px;
+		margin-bottom: 30px;
+	}
+	.con_img{
+		content: "";
+		display: block;
+		clear: both;
+		width: 900px;
+		margin:0 auto;
+	}
+	.con_box1{
+		float: left;
+		width: 230px;
+		height: 250px;
+		background-color: #fbeccb;
+	}
+	.con_box2{
+		float: left;
+		width: 230px;
+		height: 250px;
+		margin: 0 100px;
+		background-color: #f2deb3;
+	}
+	.con_box3{
+		float: left;
+		width: 230px;
+		height: 250px;
+		background-color: #ead3a2;
+	}
+	.sub_title{
+		font-size: 30px;
+		font-weight: 900;
+	}
+	.sub_ex{
+		margin-top: 70px;
 	}
 	.con_title img{
 		width: 280px;
 	}
 	.con_ex{
-		margin:20px auto;
 		font-family: 'Noto Sans CJK KR DemiLight';
 		font-size: 9px;
 		letter-spacing: 2.2px;
 		line-height: 2;
-	}
-	.ex_btn img{
-		width: 125px;
-	}
-	.deco_box img{
-		position: absolute;
-		z-index: -1;
-		top: 120px;
-		left: 280px;
-		width: 305px;
 	}
 	.img_search{
 		width: 10x;
@@ -121,6 +287,9 @@
 	.em{
 		font-family: 'Noto Sans Korean Medium';
 	}
+	
+	
+	
 	
 	
 	/* modal */
@@ -155,7 +324,7 @@
 		width: 100px;
 		text-align: center;
 		margin: 0 auto;
-		font-family: Noto Sans Korean Medium;
+		font-family: 'Noto Sans Korean Medium';
 		font-size: 18px;
 		font-weight:bold;
 		color: #333333;
@@ -253,3 +422,6 @@
 		width: 180px;
 		border: none;
 	}
+	
+	
+/* font */
