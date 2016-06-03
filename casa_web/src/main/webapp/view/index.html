@@ -6,8 +6,8 @@
 	<title>카사갤러리아 입니다.</title>
 	<link rel="stylesheet" href="../css/index.css">
 	<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="../js/index.js"></script>
 	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
 	
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -19,23 +19,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	
-	<script>
-		function login() {
-			var reqData = {id:$("#email").val(),pw:$("#password").val()};
-			requestService("/api/member/login.do", reqData, function(msg) {
-				var rsltCode = msg.result;
-				var resData = msg.resData[0];
-				if(rsltCode=="error") {
-					alert("오류 코드 : "+resData.errorCd+"\n오류 메시지: "+resData.errorMsg);
-					
-				}else if(rsltCode=="success") {
-					alert(resData.usr.name+"님 환영합니다.");
-				}
-				
-			});
-		}
-	
-	</script>
 	</head>
 	<body>
 			<div class="header">
@@ -145,10 +128,10 @@
 		      		<div class="login_title">JOIN US</div>
 		      	</div>
 		      	<div class="modal_signup">
-		      		<div class="modal_input"><input type="text" placeholder="이메일" ></div>
-		      		<div class="modal_input"><input type="text" placeholder="성명"></div>
-		      		<div class="modal_input"><input type="password" placeholder="비밀번호"></div>
-		      		<div class="modal_input"><input type="password" placeholder="확인"></div>
+		      		<div class="modal_input"><input type="text" placeholder="이메일" id="join_email"></div>
+		      		<div class="modal_input"><input type="text" placeholder="성명" id="join_name"></div>
+		      		<div class="modal_input"><input type="password" placeholder="비밀번호" id="join_password"></div>
+		      		<div class="modal_input"><input type="password" placeholder="확인" id="join_password_chk"></div>
 		      	</div>
 		      	<div class="modal_group_btn">
 		      		<div class="login_btn_def">이메일로 가입하기</div>

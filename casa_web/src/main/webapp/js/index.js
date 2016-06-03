@@ -1,4 +1,4 @@
-$(document).ready(function(){
+	$(document).ready(function(){
 	    $(".about").hover(function(){
 			$(".about").text("까사 갤러리아란");
 	    },
@@ -46,3 +46,39 @@ $(document).ready(function(){
 			$(".rules").text("RULES");
 	    });
 	});
+	
+	function login() {
+		var reqData = {id:$("#email").val(),pw:$("#password").val()};
+		requestService("/api/member/login.do", reqData, function(msg) {
+			var rsltCode = msg.result;
+			var resData = msg.resData[0];
+			if(rsltCode=="error") {
+				alert("오류 코드 : "+resData.errorCd+"\n오류 메시지: "+resData.errorMsg);
+				
+			}else if(rsltCode=="success") {
+				alert(resData.usr.name+"님 환영합니다.");
+			}
+			
+		});
+	}
+	
+	function join() {
+		var reqData = {id:$("#join_email").val(), name:$("#join_name").val(), pw:$("#join_password").val(), type:1}
+		
+		if($("#join_password").val()!=$("#join_password_chk").val()) {
+			alert("비밀번호와 비밀번호 확인이 옳지 않습니다.");
+			return false;
+		}
+		
+		requestService("/api/member/join.do", reqData, function(msg) {
+			var rsltCode = msg.result;
+			var resData = msg.resData[0];
+			if(rsltCode=="error") {
+				alert("오류 코드 : "+resData.errorCd+"\n오류 메시지: "+resData.errorMsg);
+				
+			}else if(rsltCode=="success") {
+				alert(resData.rslt.name+"님 환영합니다^^;;");
+			}
+			
+		});
+	}
