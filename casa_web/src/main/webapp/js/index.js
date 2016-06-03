@@ -5,47 +5,62 @@
 	    function(){
 			$(".about").text("ABOUT US");
 	    });
-	});
-	$(document).ready(function(){
+
 	    $(".artists").hover(function(){
 			$(".artists").text("작가 보기");
 	    },
 	    function(){
 			$(".artists").text("ARTISTS");
 	    });
-	});
-	$(document).ready(function(){
+
 	    $(".artworks").hover(function(){
 			$(".artworks").text("작품 보기");
 	    },
 	    function(){
 			$(".artworks").text("ARTWORKS");
 	    });
-	});
-	$(document).ready(function(){
+
 	    $(".mygalleria").hover(function(){
 			$(".mygalleria").text("마이 갤러리아");
 	    },
 	    function(){
 			$(".mygalleria").text("MY GALLERIA");
 	    });
-	});
-	$(document).ready(function(){
+
 	    $(".withus").hover(function(){
 			$(".withus").text("함께 하는 분들");
 	    },
 	    function(){
 			$(".withus").text("WITH US");
 	    });
-	});
-	$(document).ready(function(){
+
 	    $(".rules").hover(function(){
 			$(".rules").text("규정");
 	    },
 	    function(){
 			$(".rules").text("RULES");
 	    });
+	    
+	    chk();
 	});
+	
+	function chk() {
+		var reqData = {};
+		requestService("/api/member/user.do", reqData, function(msg) {
+			var rsltCode = msg.result;
+			var resData = msg.resData[0];
+			if(rsltCode=="error") {
+				$("#now_name").html("");
+				$("#lgn_after").css("display", "none");
+				$("#lgn_before").css("display", "");
+			}else if(rsltCode=="success") {
+				$("#now_name").html(resData.usr.name);
+				$("#lgn_after").css("display", "");
+				$("#lgn_before").css("display", "none");
+			}
+			
+		});
+	}
 	
 	function login() {
 		var reqData = {id:$("#email").val(),pw:$("#password").val()};
@@ -56,7 +71,9 @@
 				alert("오류 코드 : "+resData.errorCd+"\n오류 메시지: "+resData.errorMsg);
 				
 			}else if(rsltCode=="success") {
+				chk();
 				alert(resData.usr.name+"님 환영합니다.");
+				$("#close_modal1").click();
 			}
 			
 		});
@@ -78,7 +95,16 @@
 				
 			}else if(rsltCode=="success") {
 				alert(resData.rslt.name+"님 환영합니다^^;;");
+				$("#close_modal2").click();
 			}
+			
+		});
+	}
+	
+	function logout() {
+		requestService("/api/member/logout.do", null, function(msg) {
+			alert("로그아웃했습니다.");
+			chk();
 			
 		});
 	}

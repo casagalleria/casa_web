@@ -37,17 +37,17 @@
 				</div>
 				<div class="h_r">
 					<!-- 로그인 전  -->
-					<ul>
+					<ul id="lgn_before" >
 						<li><a href="#"><img class="img_search" src="../img/search_icon.png"/></a></li>
 						<li><a href="#"><span data-toggle="modal" data-target=".login_m">LOGIN</span></a></li>
 						<li><a href="#"><span data-toggle="modal" data-target=".signup_m">SIGN UP</span></a></li>
 					</ul>
 					<!--  로그인 후 -->
-					<ul>
+					<ul id="lgn_after" style="display:none;">
 						<li><a href="#"><img class="img_search" src="../img/search_icon.png"/></a></li>
 						<li><a href="#"><img class="img_profile" src="../img/icn_profile.png"/></a></li>
-						<li><a href="#">김카사 님</a></li>
-						<li><a href="#"><img class="img_logout" src="../img/btn_logout.png"/></a></li>
+						<li><a href="#" id="now_name">김카사 님</a></li>
+						<li><a href="#"><img class="img_logout" src="../img/btn_logout.png" onclick="logout();"/></a></li>
 					</ul>
 				</div>
 			</div>
@@ -75,7 +75,7 @@
 		<!-- Login modal -->
 		<div class="modal login_m" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 		  <div class="modal-dialog modal-sm">
-		  		      <div class="modal_close"><img src="../img/x_button.png" data-dismiss="modal"></div>
+		  		      <div class="modal_close"><img src="../img/x_button.png" data-dismiss="modal" id="close_modal1"></div>
 		    <div class="modal-content">
 		      <div class="modal_wrap">
 		      	<div class="modal_title">
@@ -101,7 +101,7 @@
 		<!-- SignUP modal -->
 		<div class="modal signup_m" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 		  <div class="modal-dialog modal-sm">
-		  		      <div class="modal_close"><img src="../img/x_button.png" data-dismiss="modal"></div>
+		  		      <div class="modal_close"><img src="../img/x_button.png" data-dismiss="modal" ></div>
 		    <div class="modal-content">
 		      <div class="modal_wrap">
 		      	<div class="modal_title">
@@ -127,7 +127,7 @@
 		<!-- SignUP-secondpage modal -->
 		<div class="modal signup2_m" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 		  <div class="modal-dialog modal-sm">
-		  		      <div class="modal_close"><img src="../img/x_button.png" data-dismiss="modal"></div>
+		  		      <div class="modal_close"><img src="../img/x_button.png" data-dismiss="modal" id="close_modal2"></div>
 		    <div class="modal-content">
 		      <div class="modal_wrap">
 		      	<div class="modal_title">

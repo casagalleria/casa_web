@@ -46,7 +46,11 @@ public class MemberController {
 	public Map<String, Object> getUser(HttpSession request) {
 		Map<String, Object> mapResData = new HashMap<String, Object>();
 		SessionUtil sessionUtil = new SessionUtil(request);
+		if(sessionUtil.isLogin()) {
 		mapResData.put("usr", sessionUtil.getUser());
+		} else {
+			return JsonUtil.putFailJsonContainer("NOT_LOGIN", "로그인 되지 않았습니다.");
+		}
 		return JsonUtil.putSuccessJsonContainer(mapResData);
 	}
 	
