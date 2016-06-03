@@ -31,7 +31,7 @@ public class MemberController {
 			return JsonUtil.putFailJsonContainer("ERR_LOGIN_0001", "아이디와 비밀번호를 확인해주세요.");
 		
 		if(!cm.getPw().equals(strPw))
-			return JsonUtil.putFailJsonContainer("ERR_LOGIN_0001", "아이디와 비밀번호를 확인해주세요.");
+			return JsonUtil.putFailJsonContainer("ERR_LOGIN_0002", "아이디와 비밀번호를 확인해주세요.");
 		
 		cm.setPw(null);
 		request.setAttribute("userInfo", cm);
